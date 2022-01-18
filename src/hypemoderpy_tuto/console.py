@@ -12,6 +12,7 @@ from . import __version__
 @click.option('--lang', default="en", show_default=True)
 def main(lang):
     """The hypermodern Python project."""
+    click.echo("Hello, world!")
     API_URL = f"https://{lang}.wikipedia.org/api/rest_v1/page/random/summary"
     with requests.get(API_URL) as response:
         response.raise_for_status()
